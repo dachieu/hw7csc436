@@ -9,12 +9,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {JsonpModule} from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { TwoComponent } from './two/two.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
+
+import { ContactsComponent } from './contacts/contacts.component';
+
 
 import { WikipediaSearchComponent } from './wikipedia-search.component'
 import { WikipediaService } from './wikipedia.service';
@@ -24,7 +28,7 @@ import { LoggedInGuard } from './logged-in.guard';
 
 
 const routes: Routes = [
-// basic routes{ path: '', redirectTo: 'home', pathMatch: 'full' },{ path: 'settings', component: SettingsComponent },{ path: 'dashboard', component: DashboardComponent },{ path: 'search', component: WikipediaSearchComponent },// authentication demo
+// basic routes{ path: '', redirectTo: 'home', pathMatch: 'full' },{ path: 'settings', component: SettingsComponent },{ path: 'dashboard', component: DashboardComponent },{ path: 'search', component: WikipediaSearchComponent },{ path: 'contacts', component: ContactsComponent },// authentication demo
   { path: 'login', component: LoginComponent },
   {
     path: 'navbar',
@@ -51,7 +55,8 @@ const routes: Routes = [
     TwoComponent,
     DashboardComponent,
     SettingsComponent,
-WikipediaSearchComponent
+WikipediaSearchComponent,
+ContactsComponent
   ],
   imports: [
     BrowserModule,
